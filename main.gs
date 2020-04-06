@@ -38,7 +38,7 @@ function doPost(e) {
 
   if(event.type == 'message') {
     const userMessage = event.message.text;
-    let replyMessage = userMessage;
+    let replyMessage = userMessage + 'だに～';
     if (userMessage == 'signup') {
       if (signUp(userId)) {
         replyMessage = '登録しただに～';
