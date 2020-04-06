@@ -5,18 +5,20 @@ const userSht = spreadsheet.getSheetByName('userdata');
 /**
  * 指定した行の最終列を返す関数
  * @param {number} rowNum 行を指定する値
+ * @param sheet 操作するシート
  * @returns 最終列の数値
  */
-function lastColumn (rowNum) {
+function lastColumn (sheet,rowNum) {
   return sheet.getRange(rowNum, rowNum).getNextDataCell(SpreadsheetApp.Direction.NEXT).getColumn();
 }
 
 /**
  * 指定した列の最終行を返す関数
  * @param {number} colNum 列を指定する値
+ * @param sheet 操作するシート
  * @returns 最終行の数値
  */
-function lastColumn (colNum) {
+function lastColumn (sheet,colNum) {
   return sheet.getRange(colNum, colNum).getNextDataCell(SpreadsheetApp.Direction.DOWN).getRow();
 }
 
