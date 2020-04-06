@@ -1,7 +1,17 @@
-// Channel_access_tokenを登録
+/**
+ * LINEのチャンネルアクセストークン
+ * @type {string}
+ */
 const CHANNEL_ACCESS_TOKEN = 'ZXl3ygFenENGMEGBe8VBZYOvivh8DIhRib5Ocl6nINNjvDNlzSZ3vNmA9bT3sk1JMLuC1ognMTjOVX2XxVBVU373OpkTcXFOuZZIaomkLQbcpgkerRQVojLr2FwzOpAhkdz2LMoEGwPp6HSwEtcGEwdB04t89/1O/w1cDnyilFU=';
 
+/**
+ * 送られてきたメッセージを処理してポストする関数
+ * @param e POSTされたデータ
+ */
 function doPost(e) {
+  /**
+   * POSTデータのメイン要素
+   */
   const event = JSON.parse(e.postData.contents).events[0];
   const replyToken= event.replyToken;
 
@@ -18,7 +28,6 @@ function doPost(e) {
 
   if(event.type == 'message') {
     const userMessage = event.message.text;
-    // 今回は鸚鵡返しなので届いたメッセージをそのまま返します。
     const replyMessage = userMessage
 
     // もし届いたユーザーからのメッセージによって他にやりたい処理
@@ -46,7 +55,10 @@ function doPost(e) {
   }
 }
 
-// profileを取得してくる関数
+/**
+ * ユーザーのプロフィールを取得する関数
+ * @param userId ユーザーID
+ */
 function getUserProfile(userId){
   const url = 'https://api.line.me/v2/bot/profile/' + userId;
   const userProfile = UrlFetchApp.fetch(url,{
