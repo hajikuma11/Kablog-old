@@ -20,7 +20,6 @@ function doPost(e) {
    */
   const event = JSON.parse(e.postData.contents).events[0];
   const replyToken= event.replyToken;
-
   // エラー処理
   if (typeof replyToken === 'undefined') {
     return;
@@ -31,12 +30,22 @@ function doPost(e) {
 
   // ユーザーにbotがフォローされた場合に起きる処理
   if(event.type == 'follow') {
-    
+  }
+
+  if (event.type == 'unfollow') {
+    signOut(userID);
   }
 
   if(event.type == 'message') {
     const userMessage = event.message.text;
-    const replyMessage = userMessage
+    let replyMessage = userMessage;
+    if (userMessage == 'signup') {
+      if (signUp(userId)) {
+        replyMessage = '登録しただに～';
+      } else {
+        replyMessage = '登録失敗だに～';
+      }
+    }
 
     // もし届いたユーザーからのメッセージによって他にやりたい処理
     // (ex: spread sheetへの記入など)がある場合は、ここに入れて下さい。

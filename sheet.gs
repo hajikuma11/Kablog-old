@@ -62,7 +62,7 @@ function toNumber(alp) {
 function signUp(userid) {
   kabLastColumn = lastColumn(kabdata, 1);
 
-  if (kabLastColumn === lastColumn(userdata, 1)) {
+  if (kabLastColumn == lastColumn(userdata, 1)) {
     kabLastColumn++;
     kabdata.getRange(toAlphabet(kabLastColumn) + "1").setValue(userid);
     userdata.getRange(toAlphabet(kabLastColumn) + "1").setValue(userid);
