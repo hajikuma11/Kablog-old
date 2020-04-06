@@ -1,4 +1,10 @@
 /**
+ * 『GASでLINEbotを作る』
+ * https://qiita.com/ttexan/items/749bed9a60313e51b4c8
+ * 参考にさせていただいた記事
+ */
+
+/**
  * LINEのチャンネルアクセストークン
  * @type {string}
  */
@@ -24,7 +30,9 @@ function doPost(e) {
   const nickname = getUserProfile(userId);
 
   // ユーザーにbotがフォローされた場合に起きる処理
-  if(event.type == 'follow') {}
+  if(event.type == 'follow') {
+    
+  }
 
   if(event.type == 'message') {
     const userMessage = event.message.text;
