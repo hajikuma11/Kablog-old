@@ -14,8 +14,7 @@
 
 "Kablog"を動かすのに必要なライブラリなどを列挙する
 
-* huga 3.5.2
-* Kabloghuga 1.0.2
+* None
 
 # Note
 
