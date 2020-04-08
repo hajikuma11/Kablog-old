@@ -1,7 +1,7 @@
 {
   "name": "testClasp",
   "version": "1.0.0",
-  "description": "",
+  "description": "みんなも自分のカブ価を記録しよう！",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -14,5 +14,13 @@
   },
   "dependencies": {
     "@types/google-apps-script": "^1.0.11"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hajikuma11/Kablog.git"
+  },
+  "bugs": {
+    "url": "https://github.com/hajikuma11/Kablog/issues"
+  },
+  "homepage": "https://github.com/hajikuma11/Kablog#readme"
 }
