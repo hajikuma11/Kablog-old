@@ -1,23 +1,18 @@
 {
-  "name": "Kablog",
+  "name": "testClasp",
   "version": "1.0.0",
-  "description": "みんなも自分のカブ価を記録しよう！",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/hajikuma11/Kablog.git"
-  },
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/hajikuma11/Kablog/issues"
-  },
-  "homepage": "https://github.com/hajikuma11/Kablog#readme",
   "devDependencies": {
+    "@google/clasp": "^2.3.0"
+  },
+  "dependencies": {
     "@types/google-apps-script": "^1.0.11"
   }
 }
